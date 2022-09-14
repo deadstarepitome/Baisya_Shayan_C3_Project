@@ -2,6 +2,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import java.time.LocalTime;
+import java.util.List;
+import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -68,8 +70,9 @@ class RestaurantTest {
                 () -> restaurant.removeFromMenu("French fries"));
     }
     @Test
-    public void getOrderTotal_should_return_total_if_items_are_ordered() {
-        int cost = 5; // Temp  for failing test
+    public void getOrderTotal_should_return_cost_if_items_are_ordered() {
+        List<String> selectedItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        int cost = restaurant.getTotalOrderCost(selectedItems);
         assertEquals(388, cost);
     }
 }
