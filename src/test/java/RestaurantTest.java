@@ -72,8 +72,11 @@ class RestaurantTest {
 
   @Test
   public void getOrderTotal_should_return_correct_total_if_items_are_ordered() {
-        int cost = 5; // Temp, for failing test
-        assertEquals(388, cost);
+
+      List<String> selectedItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+      int Cost = restaurant.getTotalOrderCost(selectedItems);
+      assertEquals(388, Cost);
+
     }
 
 
