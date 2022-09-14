@@ -70,5 +70,12 @@ class RestaurantTest {
                 () -> restaurant.removeFromMenu("French fries"));
     }
 
+  @Test
+  public void getOrderTotal_should_return_correct_total_if_items_are_ordered() {
+        int cost = 5; // Temp, for failing test
+        assertEquals(388, cost);
+    }
+
+
 }
 
