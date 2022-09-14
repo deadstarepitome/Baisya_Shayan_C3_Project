@@ -69,11 +69,6 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 () -> restaurant.removeFromMenu("French fries"));
     }
-    @Test
-    public void getOrderTotal_should_return_cost_if_items_are_ordered() {
-        List<String> selectedItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
-        int cost = restaurant.getTotalOrderCost(selectedItems);
-        assertEquals(388, cost);
-    }
+
 }
 
